@@ -1,5 +1,8 @@
 #include "shell.h"
-
+/**
+ * array_main - Function for array
+ * Return: 0 on success
+ */
 int array_main(void)
 {
 /* array of integers with 5 elements*/
