@@ -2,7 +2,10 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <sys/types.h>
-
+/**
+ * shell_main - Entry point
+ * Return: 0 on success
+ */
 int shell_main(void)
 {
 pid_t pid;
