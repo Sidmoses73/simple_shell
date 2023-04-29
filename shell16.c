@@ -24,8 +24,8 @@ return (0);
 * Return: 1 if true, 0 otherwise
 */
 int is_cmd(info_t *info, char *path)
-{
 struct stat st;
+{
 (void)info;
 if (!path || stat(path, &st))
 return (0);
@@ -42,9 +42,9 @@ return (0);
 * Return: pointer to new buffer
 */
 char *dup_chars(char *pathstr, int start, int stop)
-{
 char *buf = malloc(sizeof(char) * (stop - start + 1));
 int i, k = 0;
+{
 for (i = start; i < stop; i++)
 {
 if (pathstr[i] != ':')
@@ -62,15 +62,16 @@ return (buf);
 * Return: full path of cmd if found or NULL
 */
 char *find_path(info_t *info, char *pathstr, char *cmd)
-{
-int i = 0, curr_pos = 0;
 char *path;
+int i = 0;
+{
+curr_pos = 0;
 if (!pathstr)
 return (NULL);
 if ((_strlen(cmd) > 2) && starts_with(cmd, "./"))
 {
 if (is_cmd(info, cmd))
-return cmd;
+return (cmd);
 }
 while (1)
 {
